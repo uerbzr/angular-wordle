@@ -10,6 +10,6 @@ export class WordleService {
     console.log(this.activeWordleArray);
   }
 
-  wordles: string[] = ['NIGEL', 'LIBBY', 'SPARE', 'KEITH'];
+  wordles: string[] = ['LEWIS', 'CARLO', 'NIGEL', 'LIBBY', 'SPARE', 'KEITH'];
   activeWordleArray: string[] = [];
 }
