@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
 export class LetterComponent {
   @Input() letter: string = '';
   @Input() position: number = 0;
-  @Input() status: string = 'none';
+  @Input() status: string = 'guessed';
 }
