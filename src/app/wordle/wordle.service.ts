@@ -10,16 +10,24 @@ export class WordleService {
     console.log(this.activeWordleArray);
   }
 
+  //ready: boolean = false;
   wordles: string[] = ['LEWIS', 'CARLO', 'NIGEL', 'LIBBY', 'SPARE', 'KEITH'];
   activeWordleArray: string[] = [];
   guessArray: string[] = [];
   guessArrayHistory: [][] = [];
   KeyboardClick(n: string) {
-    if (n === 'delete') {
+    console.log(this.guessArray);
+    console.log('length:', this.guessArray.length);
+    if (n === 'DELETE') {
       this.guessArray.shift();
     } else {
-      this.guessArray.push(n);
+      if (this.guessArray.length >= 5) {
+        return;
+      } else {
+        this.guessArray.push(n);
+      }
     }
+
     console.log(this.guessArray);
   }
   TakeGuess() {

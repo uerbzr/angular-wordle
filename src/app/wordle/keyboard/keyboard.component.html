@@ -11,7 +11,7 @@
   <button (click)="Guess('O')" class="key btn btn-primary">O</button>
   <button (click)="Guess('P')" class="key btn btn-primary">P</button>
   <span class="key"></span>
-  <button class="key btn btn-primary">⬅️</button>
+  <button (click)="Guess('DELETE')" class="key btn btn-primary">⬅️</button>
 </div>
 <div class="col-md-12">
   <button class="key btn btn-primary">&nbsp;</button>
@@ -25,7 +25,14 @@
   <button (click)="Guess('K')" class="key btn btn-primary">K</button>
   <button (click)="Guess('L')" class="key btn btn-primary">L</button>
   <span class="key"></span>
-  <button (click)="Guess('ENTER')" class="key btn btn-primary">Enter</button>
+
+  <button
+    *ngIf="true === true"
+    (click)="Guess('ENTER')"
+    class="key btn btn-primary"
+  >
+    Enter
+  </button>
 </div>
 <div class="col-md-12">
   <button class="key btn btn-primary">&nbsp;</button>
