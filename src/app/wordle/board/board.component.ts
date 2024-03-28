@@ -9,7 +9,8 @@ import { WordleService } from '../wordle.service';
 export class BoardComponent {
   constructor(private readonly wordleService: WordleService) {}
 
-  activeWordleArray = this.wordleService.activeWordleArray;
+  wordleAnswer = this.wordleService.activeWordleArray;
+  activeWordleArray = []; //this.wordleService.activeWordleArray;
 
   Guess(n: string) {
     console.log(n);

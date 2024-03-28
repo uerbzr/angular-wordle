@@ -9,5 +9,6 @@ import { WordleService } from '../wordle.service';
 export class FormComponent {
   constructor(private readonly wordleService: WordleService) {}
 
+  @Input() guessNumber: number = 0; //this.wordleService.wordleGuessCount;
   @Input() guessArray: string[] = this.wordleService.guessArray;
 }
